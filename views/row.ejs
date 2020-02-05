@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/main.css">
+    <title>Row</title>
+</head>
+<body>
+    <% rows.forEach( (row)=>{ %>
+        <div> <%= row.text %></div>
+        <div> <%= row.tag %></div>
+        <div> <%= row.date %></div>
+        <a href="/update/<%=row._id%>">Update</a>
+        <a href="/delete/<%=row._id%>">Delete</a>
+        <% }) %>
+        <div>
+            <form action="/createrow" method="post">
+                <input type="text" name="text" id="" placeholder="Text">
+                <input type="text" name="tag" id="" placeholder="Tag">
+                <!-- När vi trycker på denna knapp så gör vi en postrequest på denna router -->
+                <button type="submit">Post Row</button>
+            </form>
+        </div>
+</body>
+</html>
