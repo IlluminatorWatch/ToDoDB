@@ -1,0 +1,44 @@
+$font-stack: Helvetica, sans-serif;
+$primary-colorA: rgb(255, 254, 166);
+$primary-colorB: rgb(241, 210, 210);
+$primary-colorC: rgb(215, 215, 252);
+$primary-colorD: rgb(177, 245, 177);
+
+body{
+    background-color: $primary-colorA;
+    text-align: center;
+    margin: 2px;
+    font-family: $font-stack;
+    
+
+}
+
+#pic{
+    background: url(./img/pic.jpg);
+    display: block;
+    box-sizing: border-box;
+    // height: 4032px;
+    height: 1960px;
+    width: 4032;
+    max-width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(26, 25, 25, 0.2), 0 6px 20px 0 rgba(44, 44, 44, 0.19);
+    // opacity: 0.9;
+    // filter: grayscale(100%);
+    background-repeat: no-repeat;
+}
+
+#first{
+    background-color: $primary-colorA;
+}
+
+#second{
+    background-color: $primary-colorB;
+}
+
+#third{
+    background-color: $primary-colorC;
+}
+
+#fourth{
+    background-color: $primary-colorD;
+}

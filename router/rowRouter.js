@@ -8,15 +8,31 @@ const row = new Row({
         text: req.body.text, 
         tag: req.body.tag
     })
- const response = await row.save();
+   
+ const response = await row.save((err)=>{res.send(err)});
   console.log(response)
   res.redirect("/row")
-
+   
   //new Comment({text:"testdata", author:"authorname"}).save();
 })
+const items = 4;
 // Vi redirectar hit via route istället för res.render("comment")
 router.get("/row", async (req, res) => {
-    const rows = await Row.find()
+    
+    const order = {text: req.query.timesort} || {date:req.query.textsort}||{tag: req.query.tagOrder};
+    /* const timeOrder = req.query.timesort;
+    const tagOrder = req.query.tagsort;
+    const textOrder = req.query.textsort; */
+    // const rows = await Row.find().sort({text:textOrder, tag:tagOrder, date:timeOrder});
+    const page = req.query.page;
+    const rows = await Row
+    .find()
+    .sort(order)
+    .skip( (page-1)*items)
+    .limit(4)
+    .select({date:1, text:1, tag:1});
+    
+    console.log(req.query.page);
     // vi renderar detta via views comment.ejs comments är en array som vi kan loopa
      res.render("row", {rows: rows});
 })

@@ -8,20 +8,40 @@
     <title>Row</title>
 </head>
 <body>
-    <% rows.forEach( (row)=>{ %>
-        <div> <%= row.text %></div>
-        <div> <%= row.tag %></div>
-        <div> <%= row.date %></div>
-        <a href="/update/<%=row._id%>">Update</a>
-        <a href="/delete/<%=row._id%>">Delete</a>
-        <% }) %>
-        <div>
-            <form action="/createrow" method="post">
-                <input type="text" name="text" id="" placeholder="Text">
-                <input type="text" name="tag" id="" placeholder="Tag">
-                <!-- När vi trycker på denna knapp så gör vi en postrequest på denna router -->
-                <button type="submit">Post Row</button>
-            </form>
-        </div>
+    <div id="pic">
+
+    </div>
+    <div id="first">
+        <% rows.forEach( (row)=>{ %>
+            <div> <%= row.text %></div>
+            <div> <%= row.tag %></div>
+            <div> <%= row.date %></div>
+            <a href="/update/<%=row._id%>">Update</a>
+            <a href="/delete/<%=row._id%>">Delete</a>
+            <% }) %>
+    </div>
+    <div id="second">
+        <form action="/createrow" method="post">
+            <input type="text" name="text" id="" placeholder="Text">
+            <input type="text" name="tag" id="" placeholder="Tag">
+            <!-- När vi trycker på denna knapp så gör vi en postrequest på denna router -->
+            <button type="submit">Post Row</button>
+        </form>
+    </div>
+    <div id="third">
+        <a href="/row/?timesort=1">Sort by date asc</a>
+        <a href="/row/?timesort=-1">Sort by date desc</a>
+        <!-- <a href="/row/?tagsort=1">Sort by tag asc</a>
+        <a href="/row/?tagsort=-1">Sort by tag desc</a>
+        <a href="/row/?textsort=1">Sort by text asc</a>
+        <a href="/row/?textsort=-1">Sort by text desc</a> -->
+    </div>
+    <div id="fourth">
+        <a href="/row/?page=1">1</a>
+        <a href="/row/?page=2">2</a>
+        <a href="/row/?page=3">3</a>
+        <a href="/row/?page=4">4</a>
+    </div>
+
 </body>
 </html>

@@ -1,4 +1,27 @@
 body {
-    background: rgb(223, 218, 218);
-    text-align: center;
-}
+  background-color: #fffea6;
+  text-align: center;
+  margin: 2px;
+  font-family: Helvetica, sans-serif; }
+
+#pic {
+  background: url(./img/pic.jpg);
+  display: block;
+  box-sizing: border-box;
+  height: 1960px;
+  width: 4032;
+  max-width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(26, 25, 25, 0.2), 0 6px 20px 0 rgba(44, 44, 44, 0.19);
+  background-repeat: no-repeat; }
+
+#first {
+  background-color: #fffea6; }
+
+#second {
+  background-color: #f1d2d2; }
+
+#third {
+  background-color: #d7d7fc; }
+
+#fourth {
+  background-color: #b1f5b1; }
