@@ -6,20 +6,22 @@ router.post("/createrow", async (req, res) => {
 //req.body.allanameproperties nu tar vi bort hårdkodat "Kalle" & "Hej Hej" och låter användaren mata in via input req.body.text & author//
 const row = new Row({
         text: req.body.text, 
-        tag: req.body.tag
+        tag: req.body.tag, 
+      //  date: req.body.date
     })
+    //console.log(req.body.date)
    
- const response = await row.save((err)=>{res.send(err)});
+ const response = await row.save((err)=> err ? res.redirect("/row"): res.redirect("/row"));
   console.log(response)
-  res.redirect("/row")
-   
+ // res.redirect("/row")
+   next()
   //new Comment({text:"testdata", author:"authorname"}).save();
 })
 const items = 4;
 // Vi redirectar hit via route istället för res.render("comment")
 router.get("/row", async (req, res) => {
-    
-    const order = {text: req.query.timesort} || {date:req.query.textsort}||{tag: req.query.tagOrder};
+    // const order = {text: req.query.timesort} || {date:req.query.textsort}||{tag: req.query.tagOrder};
+    const order = {text: req.query.timesort};
     /* const timeOrder = req.query.timesort;
     const tagOrder = req.query.tagsort;
     const textOrder = req.query.textsort; */

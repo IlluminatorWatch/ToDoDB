@@ -1,13 +1,13 @@
 $font-stack: Helvetica, sans-serif;
-$primary-colorA: rgb(255, 254, 166);
-$primary-colorB: rgb(241, 210, 210);
-$primary-colorC: rgb(215, 215, 252);
-$primary-colorD: rgb(177, 245, 177);
+$primary-colorA: rgb(252, 250, 146);
+$primary-colorB: rgb(243, 202, 202);
+$primary-colorC: rgb(203, 203, 250);
+$primary-colorD: rgb(169, 247, 169);
 
 body{
     background-color: $primary-colorA;
     text-align: center;
-    margin: 2px;
+    margin: 0px;
     font-family: $font-stack;
     
 
@@ -15,16 +15,24 @@ body{
 
 #pic{
     background: url(./img/pic.jpg);
+    background-size: cover;
     display: block;
     box-sizing: border-box;
     // height: 4032px;
-    height: 1960px;
-    width: 4032;
+    // height: 1960px;
+    // width: 4032;
+    // height: 980px;
+    // width: 2016;
+    // height: 490px;
+    // width: 1008;
+    height: 740px;
+    width: 1508;
     max-width: 100%;
     box-shadow: 0 4px 8px 0 rgba(26, 25, 25, 0.2), 0 6px 20px 0 rgba(44, 44, 44, 0.19);
     // opacity: 0.9;
     // filter: grayscale(100%);
     background-repeat: no-repeat;
+    object-fit: cover;
 }
 
 #first{
@@ -41,4 +49,57 @@ body{
 
 #fourth{
     background-color: $primary-colorD;
+}
+
+form {
+    position: left;
+}
+h{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.button {
+    background-color: rgb(255, 126, 255);
+    color: black;
+    border: 2px solid rgb(221, 41, 176);
+    transition-duration: 0.4s;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 06px;
+  }
+  
+.button1{
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(115, 223, 118);
+    opacity: 0.6;
+    transition: 1.9s;
+    width: 100px;
+}
+
+.button1:hover{
+    background-color: rgb(142, 241, 128);
+    color: white;
+    border: 2px solid rgb(8, 117, 12);
+    opacity: 1;
+    transition: 0.3s;
+    border-radius: 22px;
+    width: 120px;
+}
+
+divInputA{
+ position: absolute;
+ left: 20px;
+}
+
+divInputB{
+    position: relative;
+    left: 20px;
 }

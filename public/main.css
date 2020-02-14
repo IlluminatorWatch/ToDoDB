@@ -1,27 +1,75 @@
 body {
-  background-color: #fffea6;
+  background-color: #fcfa92;
   text-align: center;
-  margin: 2px;
+  margin: 0px;
   font-family: Helvetica, sans-serif; }
 
 #pic {
   background: url(./img/pic.jpg);
+  background-size: cover;
   display: block;
   box-sizing: border-box;
-  height: 1960px;
-  width: 4032;
+  height: 740px;
+  width: 1508;
   max-width: 100%;
   box-shadow: 0 4px 8px 0 rgba(26, 25, 25, 0.2), 0 6px 20px 0 rgba(44, 44, 44, 0.19);
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  object-fit: cover; }
 
 #first {
-  background-color: #fffea6; }
+  background-color: #fcfa92; }
 
 #second {
-  background-color: #f1d2d2; }
+  background-color: #f3caca; }
 
 #third {
-  background-color: #d7d7fc; }
+  background-color: #cbcbfa; }
 
 #fourth {
-  background-color: #b1f5b1; }
+  background-color: #a9f7a9; }
+
+form {
+  position: left; }
+
+h {
+  margin: 0px;
+  padding: 0px; }
+
+.button {
+  background-color: #ff7eff;
+  color: black;
+  border: 2px solid #dd29b0;
+  transition-duration: 0.4s;
+  padding: 2px 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 06px; }
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #73df76;
+  opacity: 0.6;
+  transition: 1.9s;
+  width: 100px; }
+
+.button1:hover {
+  background-color: #8ef180;
+  color: white;
+  border: 2px solid #08750c;
+  opacity: 1;
+  transition: 0.3s;
+  border-radius: 22px;
+  width: 120px; }
+
+divInputA {
+  position: absolute;
+  left: 20px; }
+
+divInputB {
+  position: relative;
+  left: 20px; }
