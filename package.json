@@ -1,5 +1,5 @@
 {
-  "name": "TodoListDB",
+  "name": "kk",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "cypress": "cypress open",
     "cy:run": "cypress run -- --record --spec 'cypress/integration/todo_ui_spec.js'",
     "unittest": "mocha",
-    "test": "unittest && cy:run"
+    "test": "npm run unittest & npm run cy:run"
   },
   "keywords": [],
   "author": "",

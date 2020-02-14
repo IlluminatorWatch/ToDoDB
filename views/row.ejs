@@ -24,12 +24,12 @@
         <div id="divInputA"> <%= row.text %></div>
         <div id="divInputB"> <%= row.tag %></div>
         <!-- <div> <%= row.date %></div> -->
-        <%= splitingDate.getFullYear() %>
-        <%= splitingDate.getMonth() %>
-        <%= splitingDate.getDate() %>
+        <%= splitingDate.getFullYear() + " :" %>
+        <%= splitingDate.getMonth() + " :" %>
+        <%= splitingDate.getDate() + " :" %>
         <%= splitingDate.getHours() + " :" %>
         <%= splitingDate.getMinutes() + " :" %>
-        <%= splitingDate.getSeconds() + " :" %>
+        <!-- <%= splitingDate.getSeconds() + " :" %> -->
         <!-- <button href="/update/<%=row._id%>">Update</button>
             <button href="/delete/<%=row._id%>">Delete</button> -->
         <a href="/update/<%=row._id%>"><button class="button button1">Update</button></a>
@@ -46,12 +46,12 @@
         </form>
     </div>
     <div id="third">
-        <a href="/row/?timesort=1"><button class="button button1">Sort by date asc</button></a>
+        <!-- <a href="/row/?timesort=1"><button class="button button1">Sort by date asc</button></a>
         <a href="/row/?timesort=-1"><button class="button button1">Sort by date desc</button></a>
-        <!-- <a href="/row/?tagsort=1">Sort by tag asc</a>
-        <a href="/row/?tagsort=-1">Sort by tag desc</a>
-        <a href="/row/?textsort=1">Sort by text asc</a>
-        <a href="/row/?textsort=-1">Sort by text desc</a> -->
+        <a href="/row/?tagsort=1">Sort by tag asc</a>
+        <a href="/row/?tagsort=-1">Sort by tag desc</a> -->
+        <a href="/row/?textsort=1"><button class="button button1">Sort by text asc</button></a>
+        <a href="/row/?textsort=-1"><button class="button button1">Sort by text desc</button></a>
     </div>
     <div id="fourth">
         <a href="/row/?page=1"><button class="button button1">1 One 1</button></a>
@@ -59,7 +59,8 @@
         <a href="/row/?page=3"><button class="button button1">3 Three 3</button></a>
         <a href="/row/?page=4"><button class="button button1">4 Four 4</button></a>
     </div>
-    <Footer>All rights reserved, Trade Mark, Copy Right and so forth and so on. ToDo-list Made by Adam Kammerland
+    <Footer><a href="/about">About</a>All rights reserved, Trade Mark, Copy Right and so forth and so on. ToDo-list Made
+        by Adam Kammerland
         20200207</Footer>
 </body>
 
